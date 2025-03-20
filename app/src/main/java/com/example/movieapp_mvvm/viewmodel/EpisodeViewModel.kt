@@ -6,14 +6,13 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class EpisodeViewModel : ViewModel() {
-    private val repository = EpisodeRepository()
-    private val repository = EpisodeRepository()
+    private val repository = EpisodeRepository() // Hanya satu deklarasi repository
 
     // State untuk daftar episode
     private val _episodes = MutableStateFlow<List<Episode>>(emptyList())
     val episodes: StateFlow<List<Episode>> = _episodes
 
-    init {
+    init { 
         loadEpisodes()
     }
 
