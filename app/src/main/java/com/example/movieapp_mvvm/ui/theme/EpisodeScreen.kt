@@ -114,13 +114,14 @@ fun EpisodesScreen(viewModel: EpisodeViewModel = viewModel()) {
 @Composable
 fun EpisodeItem(episode: Episode, onDownloadClick: () -> Unit) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth()
+            .padding(vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
             modifier = Modifier
-                .size(80.dp)
-                .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
+                .size(125.dp, 80.dp)
+                .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)),
         ) {
             Text(
                 text = "Movie",
